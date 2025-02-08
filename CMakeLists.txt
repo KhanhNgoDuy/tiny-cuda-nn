@@ -31,6 +31,7 @@ project(
 
 # Khanh: change gcc path to use conda's installed gcc version
 set(CMAKE_C_COMPILER "${CONDA_PREFIX}/bin/x86_64-conda-linux-gnu-gcc")
+set(CMAKE_CXX_COMPILER "${CONDA_PREFIX}/bin/x86_64-conda-linux-gnu-g++")
 
 option(TCNN_BUILD_BENCHMARK "Build tiny-cuda-nn example benchmark?" ON)
 option(TCNN_BUILD_EXAMPLES "Build tiny-cuda-nn example applications?" ON)
