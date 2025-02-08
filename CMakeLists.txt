@@ -29,6 +29,9 @@ project(
 	LANGUAGES CXX CUDA
 )
 
+# Khanh: change gcc path to use conda's installed gcc version
+set(CMAKE_C_COMPILER "${CONDA_PREFIX}/bin/x86_64-conda-linux-gnu-gcc")
+
 option(TCNN_BUILD_BENCHMARK "Build tiny-cuda-nn example benchmark?" ON)
 option(TCNN_BUILD_EXAMPLES "Build tiny-cuda-nn example applications?" ON)
 option(TCNN_ALLOW_CUBLAS_CUSOLVER "Allows tiny-cuda-nn to use cuBLAS and cuSolver. Only required for the Shampoo optimizer." OFF)
